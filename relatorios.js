@@ -37,6 +37,7 @@ pesquisar.addEventListener("click", function(){
         if (tipo.value = "Status"){
             var linha = document.createElement("tr")
             linha.innerHTML = "<td>" + element.id + "</td><td>" + element.nome + "</td><td>" + element.cor +"</td><td>" + element.estampa + "</td>"
+            tabela.appendChild(linha)
         }
     })
     
