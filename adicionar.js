@@ -35,7 +35,7 @@ adicionar.addEventListener("click", function(){
     var id = id1.value+id2.value+id3.value
     var nome = document.querySelector("#nome")
     var cor = document.querySelector("#cor")
-    var estampa = document.querySelector("#estampa")
+    var estampa = document.querySelector("#estampas")
     var status = document.querySelector("#status")
     produto.id = id
     produto.nome = nome.value
