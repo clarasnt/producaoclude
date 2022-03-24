@@ -20,8 +20,11 @@ id1.addEventListener("change", function(){
 
 procurar.addEventListener("click", function(){
     var id = id1.value+id2.value+id3.value
-    var produto = localStorage.getItem(id)
+    var nomeCookie = document.cookie
+    .split('; ')
+    .find(row => row.startsWith(id+"_html"))
+    .split('=')[1];
     var elemento = document.querySelector("#produto")
-    elemento.innerHTML = produto
+    elemento.innerHTML = nomeCookie
     document.body.appendChild(elemento)
 })
