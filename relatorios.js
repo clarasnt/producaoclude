@@ -25,7 +25,7 @@ tipo.addEventListener("change", function(){
 })
 
 pesquisar.addEventListener("click", function(){
-    tabela.innerHTML = "<tr><td>ID</td><td>Nome</td><td>Cor</td><td>Estampa</td></tr>"
+    tabela.innerHTML = "<tr><th>ID</th><th>Nome</th><th>Cor</th><th>Estampa</th></tr>"
     var nome_cookie = document.cookie.split("; ")
     for (var i = 1; i <= nome_cookie.length/2; i++){
         produtos.push(JSON.parse(nome_cookie.find(row => row.startsWith("top" + i + "cs=")).split("=")[1]))
@@ -36,7 +36,7 @@ pesquisar.addEventListener("click", function(){
     escolhidos.forEach(function(element){
         if (tipo.value = "Status"){
             var linha = document.createElement("tr")
-            linha.innerHTML = "<td>" + element.id + "</td><td>" + element.nome + "</td><td>" + element.cor +"</td><td>" + element.estampa + "</td>"
+            linha.innerHTML = "<th>" + element.id + "</th><th>" + element.nome + "</th><th>" + element.cor +"</th><th>" + element.estampa + "</th>"
             tabela.appendChild(linha)
         }
     })
