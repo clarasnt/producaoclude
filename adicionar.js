@@ -24,6 +24,13 @@ id1.addEventListener("change", function(){
     }
 })
 
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname+"="+cvalue+"; "+expires;
+}
+
 adicionar.addEventListener("click", function(){
     var id = id1.value+id2.value+id3.value
     var nome = document.querySelector("#nome")
@@ -45,8 +52,9 @@ adicionar.addEventListener("click", function(){
         var manga = document.querySelector("#manga")
         produto.manga = manga.value
         var cava = document.querySelector("#cava")
-        produto.cava = cava.value
-        localStorage.setItem(id, "<div id='peca'><p>ID: " + produto.id + "</p><p>Nome: " + produto.nome + "</p><p>Status: " + produto.status + "</p><p>Cor: " + produto.cor + "</p><p>MEDIDAS</p><p>Comprimento: " + produto.comprimento + "</p><p>Ombro a Ombro: " + produto.ombro + "</p><p>Busto: " + produto.busto + "</p><p>Cintura: " + produto.cintura + "</p><p>Comprimento da Manga: " + produto.manga + "</p><p>Cava: " + produto.cava + "</p></div>")
+        produto.cava = cava.valuevar 
+        var produto_html = value = "<div id='peca'><p>ID: " + produto.id + "</p><p>Nome: " + produto.nome + "</p><p>Status: " + produto.status + "</p><p>Cor: " + produto.cor + "</p><p>MEDIDAS</p><p>Comprimento: " + produto.comprimento + "</p><p>Ombro a Ombro: " + produto.ombro + "</p><p>Busto: " + produto.busto + "</p><p>Cintura: " + produto.cintura + "</p><p>Comprimento da Manga: " + produto.manga + "</p><p>Cava: " + produto.cava + "</p></div>"
+        setCookie(id, produto_html, 20)
     }
 })
 
