@@ -25,7 +25,7 @@ tipo.addEventListener("change", function(){
 
 pesquisar.addEventListener("click", function(){
     var nome_cookie = document.cookie.split("; ")
-    for (var i = 1; i <= nome_cookie.length; i++){
-        produtos.push(nome_cookie.find(row => row.startsWith("TOP"+i+"CS=").split("=")[1]))
+    for (var i = 1; i <= nome_cookie.length/2; i++){
+        produtos.push(JSON.parse(nome_cookie.find(row => row.startsWith("top" + i + "cs=")).split("=")[1]))
     }
 })
