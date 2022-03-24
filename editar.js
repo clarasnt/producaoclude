@@ -53,5 +53,5 @@ editar.addEventListener("click", function(){
     var id = id1.value + id2.value + id3.value
     document.querySelector("#peca").innerHTML = document.querySelector("#peca").innerHTML.replace(edicao11.value, edicao22.value)
     var produto = document.querySelector("#produto")
-    setCookie(id, "#" + produto.innerHTML, 50)
+    setCookie(id+"_html", "#" + produto.innerHTML, 50)
 })
