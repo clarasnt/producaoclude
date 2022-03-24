@@ -34,8 +34,11 @@ item.addEventListener("change", function(){
         edicao1.setAttribute("type", "text")
         edicao2.setAttribute("type", "text")
     } else if (item.value == "Status"){
-        edicao1.outerHTML = "<select id='edicao11'><option value=''>Selecionar</option><option value='Pausada'>Pausada</option><option value='Fazendo'>Fazendo</option><option value='pronta'>Pronta</option><option value='postada'>Postada</option><option value='vendida'>Vendida</option></select>"
-        edicao2.outerHTML = "<select id='edicao22'><option value=''>Selecionar</option><option value='Pausada'>Pausada</option><option value='Fazendo'>Fazendo</option><option value='pronta'>Pronta</option><option value='postada'>Postada</option><option value='vendida'>Vendida</option></select>"
+        edicao1.outerHTML = "<select id='edicao11'><option value=''>Selecionar</option><option value='Pausada'>Pausada</option><option value='Fazendo'>Fazendo</option><option value='Pronta'>Pronta</option><option value='Postada'>Postada</option><option value='Vendida'>Vendida</option></select>"
+        edicao2.outerHTML = "<select id='edicao22'><option value=''>Selecionar</option><option value='Pausada'>Pausada</option><option value='Fazendo'>Fazendo</option><option value='Pronta'>Pronta</option><option value='Postada'>Postada</option><option value='Vendida'>Vendida</option></select>"
+    } else if (item.value == "Cor"){
+        edicao1.outerHTML = "<select id='edicao11'><option value=''>Selecionar</option><option value='Branco'>Branco</option><option value='Preto'>Preto</option><option value='Cinza'>Cinza</option><option value='Azul'>Azul</option><option value='Laranja'>Laranja</option></select>"
+        edicao2.outerHTML = "<select id='edicao22'><option value=''>Selecionar</option><option value='Branco'>Branco</option><option value='Preto'>Preto</option><option value='Cinza'>Cinza</option><option value='Azul'>Azul</option><option value='Laranja'>Laranja</option></select>"
     }
 })
 
