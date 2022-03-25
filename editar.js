@@ -43,6 +43,8 @@ item.addEventListener("change", function(){
         edicao2 = document.querySelector("#edicao22")
     } else
     if (item.value == "Cor"){
+        edicao1.outerHTML = "<select id='edicao111'><option value=''>Selecionar</option><option value='Branco'>Branco</option><option value='Preto'>Preto</option><option value='Cinza'>Cinza</option><option value='Azul'>Azul</option><option value='Laranja'>Laranja</option><option value='Bege'>Bege</option><option value='Marrom'>Marrom</option><option value='Verde'>Verde</option><option value='Rosa'>Rosa</option><option value='Roxo'>Roxo</option></select>"
+        edicao2.outerHTML = "<select id='edicao222'><option value=''>Selecionar</option><option value='Branco'>Branco</option><option value='Preto'>Preto</option><option value='Cinza'>Cinza</option><option value='Azul'>Azul</option><option value='Laranja'>Laranja</option><option value='Bege'>Bege</option><option value='Marrom'>Marrom</option><option value='Verde'>Verde</option><option value='Rosa'>Rosa</option><option value='Roxo'>Roxo</option></select>"
         edicao1 = document.querySelector("#edicao111")
         edicao2 = document.querySelector("#edicao222")
     } else
