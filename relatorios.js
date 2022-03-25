@@ -48,6 +48,15 @@ pesquisar.addEventListener("click", function(){
                 linha.innerHTML = "<th>" + element.id + "</th><th>" + element.nome + "</th><th>" + element.status +"</th><th>" + element.estampa + "</th>"
                 tabela.appendChild(linha)
         })
+    } else if (tipo.value == "Estampa"){
+        var escolhidos = produtos.filter(function(element){
+            return element.estampa == item.value
+        })
+        escolhidos.forEach(function(element){
+                var linha = document.createElement("tr")
+                linha.innerHTML = "<th>" + element.id + "</th><th>" + element.nome + "</th><th>" + element.status +"</th><th>" + element.cor + "</th>"
+                tabela.appendChild(linha)
+        })
     } 
     
     
