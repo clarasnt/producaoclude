@@ -6,12 +6,6 @@ var id2 = document.querySelector("#id2")
 var medidas = document.querySelector("#medidas")
 var id3 = document.querySelector("#id3")
 var adicionar = document.querySelector("#adicionar")
-var comprimento = document.querySelector("#comprimento")
-var ombro = document.querySelector("#ombro")
-var busto = document.querySelector("#busto")
-var cintura = document.querySelector("#cintura")
-var manga = document.querySelector("#manga")
-var cava = document.querySelector("#cava")
 
 id1.addEventListener("change", function(){
     if (id1.value == ""){
@@ -31,7 +25,15 @@ id1.addEventListener("change", function(){
     }
 })
 
+
+
 ok.addEventListener("click", function(){
+    var comprimento = document.querySelector("#comprimento")
+    var ombro = document.querySelector("#ombro")
+    var busto = document.querySelector("#busto")
+    var cintura = document.querySelector("#cintura")
+    var manga = document.querySelector("#manga")
+    var cava = document.querySelector("#cava")
     var escritos = colar.value.split("\t")
     comprimento.value = escritos[0]
     ombro.value = escritos[1]
@@ -60,6 +62,12 @@ adicionar.addEventListener("click", function(){
     produto.estampa = estampa.value
     produto.status = status.value
     if (id1.value == "top"){
+        var comprimento = document.querySelector("#comprimento")
+        var ombro = document.querySelector("#ombro")
+        var busto = document.querySelector("#busto")
+        var cintura = document.querySelector("#cintura")
+        var manga = document.querySelector("#manga")
+        var cava = document.querySelector("#cava")
         produto.comprimento = comprimento.value
         produto.ombro = ombro.value
         produto.busto = busto.value
