@@ -3,7 +3,6 @@ var item = document.querySelector("#item")
 var nome_item = document.querySelector("#nome_item")
 var pesquisar = document.querySelector("#pesquisar")
 var tabela = document.querySelector("#tabela")
-var produtos = []
 
 tipo.addEventListener("change", function(){
     if (tipo.value == ""){
@@ -25,6 +24,7 @@ tipo.addEventListener("change", function(){
 })
 
 pesquisar.addEventListener("click", function(){
+    var produtos = []
     var nome_cookie = document.cookie.split("; ")
     for (var i = 1; i <= nome_cookie.length/2; i++){
         produtos.push(JSON.parse(nome_cookie.find(row => row.startsWith("top" + i + "cs=")).split("=")[1]))
