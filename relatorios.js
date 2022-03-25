@@ -26,12 +26,8 @@ tipo.addEventListener("change", function(){
 pesquisar.addEventListener("click", function(){
     var produtos = []
     var nome_cookie = document.cookie.split("; ")
-    for (var i = 0; i <= nome_cookie.length/2; i++){
-        if (nome_cookie[i].indexOf("top"+i+"cs=") != -1){
-            produtos.push(JSON.parse(nome_cookie[i].split("=")[1]))
-        } else if (nome_cookie[i].indexOf("top"+i+"ct=") != -1){
-            produtos.push(JSON.parse(nome_cookie[i].split("=")[1]))
-        } 
+    for (var i = 0; i < nome_cookie.length; i++){
+        produtos.push(JSON.parse(nome_cookie[i].split("=")[1]))
     }
     if (tipo.value == "Status"){
         tabela.innerHTML = "<tr><th>ID</th><th>Nome</th><th>Cor</th><th>Estampa</th></tr>"
