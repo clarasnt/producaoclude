@@ -1,10 +1,17 @@
 var produto = new Object()
-
+var colar = document.querySelector("#colar")
+var ok = document.querySelector("#ok")
 var id1 = document.querySelector("#id1")
 var id2 = document.querySelector("#id2")
 var medidas = document.querySelector("#medidas")
 var id3 = document.querySelector("#id3")
 var adicionar = document.querySelector("#adicionar")
+var comprimento = document.querySelector("#comprimento")
+var ombro = document.querySelector("#ombro")
+var busto = document.querySelector("#busto")
+var cintura = document.querySelector("#cintura")
+var manga = document.querySelector("#manga")
+var cava = document.querySelector("#cava")
 
 id1.addEventListener("change", function(){
     if (id1.value == ""){
@@ -22,6 +29,16 @@ id1.addEventListener("change", function(){
         medidas.innerHTML = "<p>MEDIDAS</p><label for='comprimento'>Comprimento: </label><input type='number' name='comprimento' id='comprimento'><br><br><label for='cintura'>Cintura: </label><input type='number' name='cintura' id='cintura'><br><br><label for='quadril'>Quadril: </label><input type='number' name='quadril' id='quadril'><br><br><label for='barra'>Barra: </label><input type='number' name='barra' id='barra'><br><br>"
         id3.innerHTML = "<option value=''>Selecionar</option><option value='cs'>CS</option><option value='ct'>CT</option><option value='cp'>CP</option>"
     }
+})
+
+ok.addEventListener("click", function(){
+    var escritos = colar.value.split("  ")
+    comprimento.value = escritos[0]
+    ombro.value = escritos[1]
+    busto.value = escritos[2]
+    cintura.value = escritos[3]
+    manga.value = escritos[4]
+    cava.value = escritos[5]
 })
 
 function setCookie(cname,cvalue,exdays) {
@@ -43,17 +60,11 @@ adicionar.addEventListener("click", function(){
     produto.estampa = estampa.value
     produto.status = status.value
     if (id1.value == "top"){
-        var comprimento = document.querySelector("#comprimento")
         produto.comprimento = comprimento.value
-        var ombro = document.querySelector("#ombro")
         produto.ombro = ombro.value
-        var busto = document.querySelector("#busto")
         produto.busto = busto.value
-        var cintura = document.querySelector("#cintura")
         produto.cintura = cintura.value
-        var manga = document.querySelector("#manga")
         produto.manga = manga.value
-        var cava = document.querySelector("#cava")
         produto.cava = cava.value 
         var produto_html = value = "#<div id='peca'><p>ID: " + produto.id + "</p><p>Nome: " + produto.nome + "</p><p>Status: " + produto.status + "</p><p>Cor: " + produto.cor + "</p><p>Estampa: " + produto.estampa + "</p><p>MEDIDAS</p><p>Comprimento: " + produto.comprimento + "</p><p>Ombro a Ombro: " + produto.ombro + "</p><p>Busto: " + produto.busto + "</p><p>Cintura: " + produto.cintura + "</p><p>Comprimento da Manga: " + produto.manga + "</p><p>Cava: " + produto.cava + "</p></div>"
         setCookie(id + "_html", produto_html, 1000)
