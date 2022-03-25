@@ -32,7 +32,7 @@ id1.addEventListener("change", function(){
 })
 
 ok.addEventListener("click", function(){
-    var escritos = colar.value.split("  ")
+    var escritos = colar.value.split("\t")
     comprimento.value = escritos[0]
     ombro.value = escritos[1]
     busto.value = escritos[2]
