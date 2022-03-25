@@ -27,7 +27,7 @@ pesquisar.addEventListener("click", function(){
     var produtos = []
     var nome_cookie = document.cookie.split("; ")
     for (var i = 1; i <= nome_cookie.length/2; i++){
-        produtos.push(JSON.parse(nome_cookie.find(row => row.startsWith("top" + i + "cs=")).split("=")[1]))
+        produtos.push(JSON.parse(nome_cookie.find(row => row.endsWith("}")).split("=")[1]))
     }
     if (tipo.value == "Status"){
         tabela.innerHTML = "<tr><th>ID</th><th>Nome</th><th>Cor</th><th>Estampa</th></tr>"
