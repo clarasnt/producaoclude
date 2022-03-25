@@ -63,3 +63,23 @@ procurar.addEventListener("click", function(){
     elemento.innerHTML = "<div id='peca'><p>ID: " + produto.id + "</p><p>Nome: " + produto.nome + "</p><p>Status: " + produto.status + "</p><p>Cor: " + produto.cor + "</p><p>Estampa: " + produto.estampa + "</p><p>MEDIDAS</p><p>Comprimento: " + produto.comprimento + "</p><p>Ombro a Ombro: " + produto.ombro + "</p><p>Busto: " + produto.busto + "</p><p>Cintura: " + produto.cintura + "</p><p>Comprimento da Manga: " + produto.manga + "</p><p>Cava: " + produto.cava + "</p></div>"
     document.body.appendChild(elemento)
 })
+
+editar.addEventListener("click", function(){
+    if (item.value == "Status"){
+        var id = id1.value + id2.value + id3.value
+        var nome_cookie = document.cookie.split("; ").find(row => row.startsWith(id+"=")).split("=")[1].replace(edicao1.value, edicao2.value)
+        setCookie(id, nome_cookie, 1000)
+    } else if (item.value = "Cor") {
+        var id = id1.value + id2.value + id3.value
+        var nome_cookie = document.cookie.split("; ").find(row => row.startsWith(id+"=")).split("=")[1].replace(edicao1.value, edicao2.value)
+        setCookie(id, nome_cookie, 1000)
+        
+    } else if (item.value = "Estampa") {
+        var id = id1.value + id2.value + id3.value
+        var nome_cookie = document.cookie.split("; ").find(row => row.startsWith(id+"=")).split("=")[1].replace(edicao1.value, edicao2.value)
+        setCookie(id, nome_cookie, 1000)
+        
+
+    }
+    
+})
