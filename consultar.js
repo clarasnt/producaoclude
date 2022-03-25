@@ -20,8 +20,8 @@ id1.addEventListener("change", function(){
 
 procurar.addEventListener("click", function(){
     var id = id1.value+id2.value+id3.value
-    var nomeCookie = document.cookie.split('; ').find(row => row.startsWith(id+"_html")).split('#')[1]
+    var produto = JSON.parse(document.cookie.split('; ').find(row => row.startsWith(id)).split('=')[1])
     var elemento = document.querySelector("#produto")
-    elemento.innerHTML = nomeCookie
+    elemento.innerHTML = "<div id='peca'><p>ID: " + produto.id + "</p><p>Nome: " + produto.nome + "</p><p>Status: " + produto.status + "</p><p>Cor: " + produto.cor + "</p><p>Estampa: " + produto.estampa + "</p><p>MEDIDAS</p><p>Comprimento: " + produto.comprimento + "</p><p>Ombro a Ombro: " + produto.ombro + "</p><p>Busto: " + produto.busto + "</p><p>Cintura: " + produto.cintura + "</p><p>Comprimento da Manga: " + produto.manga + "</p><p>Cava: " + produto.cava + "</p></div>"
     document.body.appendChild(elemento)
 })
