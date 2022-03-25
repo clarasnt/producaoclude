@@ -71,14 +71,19 @@ editar.addEventListener("click", function(){
         var id = id1.value + id2.value + id3.value
         document.querySelector("#peca").innerHTML = document.querySelector("#peca").innerHTML.replace(edicao11.value, edicao22.value)
         var produto = document.querySelector("#produto")
-        setCookie(id+"_html", "#" + produto.innerHTML, 50)
+        setCookie(id+"_html", "#" + produto.innerHTML, 1000)
+        var nome_cookie = document.cookie.split("; ").find(row => row.startsWith(id+"=")).split("=")[1].replace(edicao11, edicao22)
+        setCookie(id, nome_cookie, 1000)
     } else if (item.value = "Cor") {
         var edicao111 = document.querySelector("#edicao111")
         var edicao222 = document.querySelector("#edicao222")
         var id = id1.value + id2.value + id3.value
         document.querySelector("#peca").innerHTML = document.querySelector("#peca").innerHTML.replace(edicao111.value, edicao222.value)
         var produto = document.querySelector("#produto")
-        setCookie(id+"_html", "#" + produto.innerHTML, 50)
+        setCookie(id+"_html", "#" + produto.innerHTML, 1000)
+        var nome_cookie = document.cookie.split("; ").find(row => row.startsWith(id+"=")).split("=")[1].replace(edicao111, edicao222)
+        setCookie(id, nome_cookie, 1000)
+        
     } else if (item.value = "Estampa") {
         var edicao1111 = document.querySelector("#edicao1111")
         var edicao2222 = document.querySelector("#edicao2222")
@@ -86,6 +91,10 @@ editar.addEventListener("click", function(){
         document.querySelector("#peca").innerHTML = document.querySelector("#peca").innerHTML.replace(edicao1111.value, edicao2222.value)
         var produto = document.querySelector("#produto")
         setCookie(id+"_html", "#" + produto.innerHTML, 1000)
+        var nome_cookie = document.cookie.split("; ").find(row => row.startsWith(id+"=")).split("=")[1].replace(edicao1111, edicao2222)
+        setCookie(id, nome_cookie, 1000)
+        
+
     }
     
 })
