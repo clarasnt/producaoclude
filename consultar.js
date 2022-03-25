@@ -27,3 +27,15 @@ procurar.addEventListener("click", function(){
 })
 
 
+var imprimir = document.querySelector("#imprimir")
+imprimir.addEventListener("click", function(){
+    id1 = document.querySelector("#id1")
+    id2 = document.querySelector("#id2")
+    id3 = document.querySelector("#id3")
+    var id = id1.value+id2.value+id3.value
+    var produto = JSON.parse(document.cookie.split("; ").find(row => row.startsWith(id)).split("=")[1])
+    var doc = new jsPDF()
+    doc.setFontSize(15)
+    doc.text('Nome: '+produto.nome+"\nCor: "+produto.cor+"\nEstampa: "+produto.estampa+"\nMEDIDAS\nComprimento: "+produto.comprimento+"\nOmbro a Ombro: "+produto.ombro+"\nBusto: "+produto.busto+"\nCintura: "+produto.cintura+"\nComprimento da Manga: "+produto.manga+"\nCava: "+produto.cava, 10, 10)
+    doc.save(produto.nome + '.pdf')
+})
