@@ -25,12 +25,12 @@ tipo.addEventListener("change", function(){
 })
 
 pesquisar.addEventListener("click", function(){
-    tabela.innerHTML = "<tr><th>ID</th><th>Nome</th><th>Cor</th><th>Estampa</th></tr>"
     var nome_cookie = document.cookie.split("; ")
     for (var i = 1; i <= nome_cookie.length/2; i++){
         produtos.push(JSON.parse(nome_cookie.find(row => row.startsWith("top" + i + "cs=")).split("=")[1]))
     }
     if (tipo.value == "Status"){
+        tabela.innerHTML = "<tr><th>ID</th><th>Nome</th><th>Cor</th><th>Estampa</th></tr>"
         var escolhidos = produtos.filter(function(element){
             return element.status == item.value
         })
@@ -40,6 +40,7 @@ pesquisar.addEventListener("click", function(){
                 tabela.appendChild(linha)
         })
     } else if (tipo.value == "Cor"){
+        tabela.innerHTML = "<tr><th>ID</th><th>Nome</th><th>Status</th><th>Estampa</th></tr>"
         var escolhidos = produtos.filter(function(element){
             return element.cor == item.value
         })
@@ -49,6 +50,7 @@ pesquisar.addEventListener("click", function(){
                 tabela.appendChild(linha)
         })
     } else if (tipo.value == "Estampa"){
+        tabela.innerHTML = "<tr><th>ID</th><th>Nome</th><th>Status</th><th>Cor</th></tr>"
         var escolhidos = produtos.filter(function(element){
             return element.estampa == item.value
         })
