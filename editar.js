@@ -43,8 +43,8 @@ item.addEventListener("change", function(){
         edicao2 = document.querySelector("#edicao22")
     } else
     if (item.value == "Cor"){
-        edicao1.outerHTML = "<select id='edicao111'><option value=''>Selecionar</option><option value='Branco'>Branco</option><option value='Preto'>Preto</option><option value='Cinza'>Cinza</option><option value='Azul'>Azul</option><option value='Laranja'>Laranja</option><option value='Bege'>Bege</option><option value='Marrom'>Marrom</option><option value='Verde'>Verde</option><option value='Rosa'>Rosa</option><option value='Roxo'>Roxo</option></select>"
-        edicao2.outerHTML = "<select id='edicao222'><option value=''>Selecionar</option><option value='Branco'>Branco</option><option value='Preto'>Preto</option><option value='Cinza'>Cinza</option><option value='Azul'>Azul</option><option value='Laranja'>Laranja</option><option value='Bege'>Bege</option><option value='Marrom'>Marrom</option><option value='Verde'>Verde</option><option value='Rosa'>Rosa</option><option value='Roxo'>Roxo</option></select>"
+        edicao1.outerHTML = "<select id='edicao111'><option value=''>Selecionar</option><option value='Branco'>Branco</option><option value='Preto'>Preto</option><option value='Cinza'>Cinza</option><option value='Azul'>Azul</option><option value='Laranja'>Laranja</option><option value='Bege'>Bege</option><option value='Marrom'>Marrom</option></select>"
+        edicao2.outerHTML = "<select id='edicao222'><option value=''>Selecionar</option><option value='Branco'>Branco</option><option value='Preto'>Preto</option><option value='Cinza'>Cinza</option><option value='Azul'>Azul</option><option value='Laranja'>Laranja</option><option value='Bege'>Bege</option><option value='Marrom'>Marrom</option></select>"
         edicao1 = document.querySelector("#edicao111")
         edicao2 = document.querySelector("#edicao222")
     } else
@@ -66,23 +66,17 @@ procurar.addEventListener("click", function(){
 
 editar.addEventListener("click", function(){
     if (item.value == "Status"){
-        var edicao11 = document.querySelector("#edicao11")
-        var edicao22 = document.querySelector("#edicao22")
         var id = id1.value + id2.value + id3.value
-        var nome_cookie = document.cookie.split("; ").find(row => row.startsWith(id+"=")).split("=")[1].replace(edicao11.value, edicao22.value)
+        var nome_cookie = document.cookie.split("; ").find(row => row.startsWith(id+"=")).split("=")[1].replace(edicao1.value, edicao2.value)
         setCookie(id, nome_cookie, 1000)
     } else if (item.value = "Cor") {
-        var edicao111 = document.querySelector("#edicao111")
-        var edicao222 = document.querySelector("#edicao222")
         var id = id1.value + id2.value + id3.value
-        var nome_cookie = document.cookie.split("; ").find(row => row.startsWith(id+"=")).split("=")[1].replace(edicao111.value, edicao222.value)
+        var nome_cookie = document.cookie.split("; ").find(row => row.startsWith(id+"=")).split("=")[1].replace(edicao1.value, edicao2.value)
         setCookie(id, nome_cookie, 1000)
         
     } else if (item.value = "Estampa") {
-        var edicao1111 = document.querySelector("#edicao1111")
-        var edicao2222 = document.querySelector("#edicao2222")
         var id = id1.value + id2.value + id3.value
-        var nome_cookie = document.cookie.split("; ").find(row => row.startsWith(id+"=")).split("=")[1].replace(edicao1111.value, edicao2222.value)
+        var nome_cookie = document.cookie.split("; ").find(row => row.startsWith(id+"=")).split("=")[1].replace(edicao1.value, edicao2.value)
         setCookie(id, nome_cookie, 1000)
         
 
