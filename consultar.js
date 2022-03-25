@@ -36,5 +36,5 @@ imprimir.addEventListener("click", function(){
     var doc = new jsPDF()
     doc.setFontSize(15)
     doc.text('Nome: '+produto.nome+"\nCor: "+produto.cor+"\nEstampa: "+produto.estampa+"\nMEDIDAS\nComprimento: "+produto.comprimento+"\nOmbro a Ombro: "+produto.ombro+"\nBusto: "+produto.busto+"\nCintura: "+produto.cintura+"\nComprimento da Manga: "+produto.manga+"\nCava: "+produto.cava, 10, 10)
-    doc.save('imprimir.pdf')
+    doc.save(produto.nome + '.pdf')
 })
