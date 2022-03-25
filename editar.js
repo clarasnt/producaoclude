@@ -72,7 +72,7 @@ editar.addEventListener("click", function(){
         document.querySelector("#peca").innerHTML = document.querySelector("#peca").innerHTML.replace(edicao11.value, edicao22.value)
         var produto = document.querySelector("#produto")
         setCookie(id+"_html", "#" + produto.innerHTML, 1000)
-        var nome_cookie = document.cookie.split("; ").find(row => row.startsWith(id+"=")).split("=")[1].replace(edicao11, edicao22)
+        var nome_cookie = document.cookie.split("; ").find(row => row.startsWith(id+"=")).split("=")[1].replace(edicao11.value, edicao22.value)
         setCookie(id, nome_cookie, 1000)
     } else if (item.value = "Cor") {
         var edicao111 = document.querySelector("#edicao111")
@@ -81,7 +81,7 @@ editar.addEventListener("click", function(){
         document.querySelector("#peca").innerHTML = document.querySelector("#peca").innerHTML.replace(edicao111.value, edicao222.value)
         var produto = document.querySelector("#produto")
         setCookie(id+"_html", "#" + produto.innerHTML, 1000)
-        var nome_cookie = document.cookie.split("; ").find(row => row.startsWith(id+"=")).split("=")[1].replace(edicao111, edicao222)
+        var nome_cookie = document.cookie.split("; ").find(row => row.startsWith(id+"=")).split("=")[1].replace(edicao111.value, edicao222.value)
         setCookie(id, nome_cookie, 1000)
         
     } else if (item.value = "Estampa") {
@@ -91,7 +91,7 @@ editar.addEventListener("click", function(){
         document.querySelector("#peca").innerHTML = document.querySelector("#peca").innerHTML.replace(edicao1111.value, edicao2222.value)
         var produto = document.querySelector("#produto")
         setCookie(id+"_html", "#" + produto.innerHTML, 1000)
-        var nome_cookie = document.cookie.split("; ").find(row => row.startsWith(id+"=")).split("=")[1].replace(edicao1111, edicao2222)
+        var nome_cookie = document.cookie.split("; ").find(row => row.startsWith(id+"=")).split("=")[1].replace(edicao1111.value, edicao2222.value)
         setCookie(id, nome_cookie, 1000)
         
 
