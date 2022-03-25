@@ -30,15 +30,25 @@ pesquisar.addEventListener("click", function(){
     for (var i = 1; i <= nome_cookie.length/2; i++){
         produtos.push(JSON.parse(nome_cookie.find(row => row.startsWith("top" + i + "cs=")).split("=")[1]))
     }
-    var escolhidos = produtos.filter(function(element){
-        return element.status == item.value
-    })
-    escolhidos.forEach(function(element){
-        if (tipo.value = "Status"){
-            var linha = document.createElement("tr")
-            linha.innerHTML = "<th>" + element.id + "</th><th>" + element.nome + "</th><th>" + element.cor +"</th><th>" + element.estampa + "</th>"
-            tabela.appendChild(linha)
-        }
-    })
+    if (tipo.value == "Status"){
+        var escolhidos = produtos.filter(function(element){
+            return element.status == item.value
+        })
+        escolhidos.forEach(function(element){
+                var linha = document.createElement("tr")
+                linha.innerHTML = "<th>" + element.id + "</th><th>" + element.nome + "</th><th>" + element.cor +"</th><th>" + element.estampa + "</th>"
+                tabela.appendChild(linha)
+        })
+    } else if (tipo.value == "Cor"){
+        var escolhidos = produtos.filter(function(element){
+            return element.cor == item.value
+        })
+        escolhidos.forEach(function(element){
+                var linha = document.createElement("tr")
+                linha.innerHTML = "<th>" + element.id + "</th><th>" + element.nome + "</th><th>" + element.status +"</th><th>" + element.estampa + "</th>"
+                tabela.appendChild(linha)
+        })
+    } 
+    
     
 })

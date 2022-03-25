@@ -1,3 +1,9 @@
 table, th, tr{
     border: 1px solid black;
+    stroke: none;
+}
+
+#tabela{
+    width: 50% !important; /*Importante manter o !important rs */
+    margin: auto;
 }
