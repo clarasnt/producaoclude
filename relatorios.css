@@ -1,8 +1,5 @@
-table, td, tr{
+table, th, tr{
     border: 1px solid black;
-}
-
-#tabela{
     display: block;
     margin-left: auto;
     margin-right: auto;
