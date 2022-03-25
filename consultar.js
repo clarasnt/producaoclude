@@ -34,6 +34,6 @@ imprimir.addEventListener("click", function(){
     var produto = JSON.parse(document.cookie.split("; ").find(row => row.startsWith(id)).split("=")[1])
     var doc = new jsPDF()
     doc.setFontSize(15)
-    doc.text('Nome: '+produto.nome+"\n-\nMEDIDAS\nComprimento: "+produto.comprimento+"\nOmbro a Ombro: "+produto.ombro+"\nBusto: "+produto.busto+"\nCintura: "+produto.cintura+"\nComprimento da Manga: "+produto.manga+"\nCava: "+produto.cava, 10, 10)
+    doc.text('Nome: '+produto.nome+"\nR$21,00\n-\nMEDIDAS\nComprimento: "+produto.comprimento+"\nOmbro a Ombro: "+produto.ombro+"\nBusto: "+produto.busto+"\nCintura: "+produto.cintura+"\nComprimento da Manga: "+produto.manga+"\nCava: "+produto.cava, 10, 10)
     doc.save(produto.nome + '.pdf')
 })
