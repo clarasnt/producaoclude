@@ -74,8 +74,6 @@ adicionar.addEventListener("click", function(){
         produto.cintura = cintura.value
         produto.manga = manga.value
         produto.cava = cava.value 
-        var produto_html = value = "#<div id='peca'><p>ID: " + produto.id + "</p><p>Nome: " + produto.nome + "</p><p>Status: " + produto.status + "</p><p>Cor: " + produto.cor + "</p><p>Estampa: " + produto.estampa + "</p><p>MEDIDAS</p><p>Comprimento: " + produto.comprimento + "</p><p>Ombro a Ombro: " + produto.ombro + "</p><p>Busto: " + produto.busto + "</p><p>Cintura: " + produto.cintura + "</p><p>Comprimento da Manga: " + produto.manga + "</p><p>Cava: " + produto.cava + "</p></div>"
-        setCookie(id + "_html", produto_html, 1000)
         var peca = '{"id":"' + produto.id + '", "nome":"' + produto.nome + '", "cor":"' + produto.cor + '", "status":"' + produto.status + '", "estampa":"' + produto.estampa + '", "comprimento":"' + produto.comprimento + '", "busto":"' + produto.busto + '", "cintura":"' + produto.cintura + '", "manga":"' + produto.manga + '", "cava":"' + produto.cava + '"}'
         setCookie(id, peca, 1000)
         alert("Produto Cadastrado")
