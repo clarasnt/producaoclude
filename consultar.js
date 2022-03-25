@@ -34,7 +34,7 @@ imprimir.addEventListener("click", function(){
     var id = id1.value+id2.value+id3.value
     var produto = JSON.parse(document.cookie.split("; ").find(row => row.startsWith(id)).split("=")[1])
     var doc = new jsPDF()
-    doc.setFontSize(30)
+    doc.setFontSize(15)
     doc.text('Nome: '+produto.nome+"\nCor: "+produto.cor+"\nEstampa: "+produto.estampa+"\nMEDIDAS\nComprimento: "+produto.comprimento+"\nOmbro a Ombro: "+produto.ombro+"\nBusto: "+produto.busto+"\nCintura: "+produto.cintura+"\nComprimento da Manga: "+produto.manga+"\nCava: "+produto.cava, 10, 10)
     doc.save('imprimir.pdf')
     window.open("imprimir.pdf", "_blank")
