@@ -15,7 +15,7 @@ tipo.addEventListener("change", function(){
     } else
     if (tipo.value == "Cor"){
         nome_item.innerHTML = "Cor"
-        item.innerHTML = "<option value=''>Selecionar</option><option value='Branco'>Branco</option><option value='Preto'>Preto</option><option value='Cinza'>Cinza</option><option value='Azul'>Azul</option><option value='Laranja'>Laranja</option>"
+        item.innerHTML = "<option value=''>Selecionar</option><option value='Branco'>Branco</option><option value='Preto'>Preto</option><option value='Cinza'>Cinza</option><option value='Azul'>Azul</option><option value='Laranja'>Laranja</option><option value='Bege'>Bege</option><option value='Marrom'>Marrom</option><option value='Roxo'>Roxo</option>"
     } else
     if (tipo.value == "Estampa"){
         nome_item.innerHTML = "Estampa"
