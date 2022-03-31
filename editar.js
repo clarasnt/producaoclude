@@ -37,8 +37,8 @@ item.addEventListener("change", function(){
         edicao2 = document.querySelector("#edicao2")
     } else 
     if (item.value == "Status"){
-        edicao1.outerHTML = "<select id='edicao11'><option value=''>Selecionar</option><option value='Pausada'>Pausada</option><option value='Fazendo'>Fazendo</option><option value='Pronta'>Pronta</option><option value='Postada'>Postada</option><option value='Vendida'>Vendida</option></select>"
-        edicao2.outerHTML = "<select id='edicao22'><option value=''>Selecionar</option><option value='Pausada'>Pausada</option><option value='Fazendo'>Fazendo</option><option value='Pronta'>Pronta</option><option value='Postada'>Postada</option><option value='Vendida'>Vendida</option></select>"
+        edicao1.outerHTML = "<select id='edicao11'><option value=''>Selecionar</option><option value='Pausada'>Pausada</option><option value='Fazendo'>Fazendo</option><option value='Pronta'>Pronta</option><option value='Postada'>Postada</option><option value='Vendida'>Vendida</option><option value='Enviada'>Enviada</option><option value='Entregue'>Entregue</option><option value='Completo'>Completo</option></select>"
+        edicao2.outerHTML = "<select id='edicao22'><option value=''>Selecionar</option><option value='Pausada'>Pausada</option><option value='Fazendo'>Fazendo</option><option value='Pronta'>Pronta</option><option value='Postada'>Postada</option><option value='Vendida'>Vendida</option><option value='Enviada'>Enviada</option><option value='Entregue'>Entregue</option><option value='Completo'>Completo</option></select>"
         edicao1 = document.querySelector("#edicao11")
         edicao2 = document.querySelector("#edicao22")
     } else
