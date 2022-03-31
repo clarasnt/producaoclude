@@ -11,7 +11,7 @@ tipo.addEventListener("change", function(){
     } else
     if (tipo.value == "Status"){
         nome_item.innerHTML = "Status"
-        item.innerHTML = "<option value=''>Selecionar</option><option value='Pausada'>Pausada</option><option value='Fazendo'>Fazendo</option><option value='Pronta'>Pronta</option><option value='Postada'>Postada</option><option value='Vendida'>Vendida</option>"
+        item.innerHTML = "<option value=''>Selecionar</option><option value='Pausada'>Pausada</option><option value='Fazendo'>Fazendo</option><option value='Pronta'>Pronta</option><option value='Postada'>Postada</option><option value='Vendida'>Vendida</option><option value='Enviada'>Enviada</option><option value='Entregue'>Entregue</option><option value='Completo'>Completo</option>"
     } else
     if (tipo.value == "Cor"){
         nome_item.innerHTML = "Cor"
